@@ -1,5 +1,5 @@
 #main_menu 
-from module import features
+from . import features
 
 
 def main_program() :
