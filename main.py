@@ -1,5 +1,5 @@
 #main_menu 
-from module import backpacker, travel_agent, contact_us
+from module import features
 
 
 def main_program() :
@@ -8,25 +8,29 @@ def main_program() :
         Welcome to European travelone
             
         What your travel style ?  
-        1. Backpacker
-        2. With Travel Agent
+        1. Itinerary
+        2. Travel Guide
         3. Visa Handler      
-        4. Delete the package
-        5. Contact Us for private holliday 
-        6. Exit
+        4. Payment
+        5. Delete item from cart
+        6. Contact Us for private holliday 
+        7. Exit
             """)
 
         menu = int(input("Enter the corresponding number : "))
 
         if menu == 1:
-            backpacker.module()
-        elif menu == 2 :
-            travel_agent.module()
+            features.module_itinerary()
+        elif menu == 2:
+            features.module_tour_guide()
         elif menu == 3 :
-            backpacker.show_visa_handler()
-            
+            features.module_visa_handler()
+        elif menu == 4 :
+            features.payment()
         elif menu == 5 :
-            contact_us.module()
+            pass
+        elif menu == 6 :
+            features.module_contact_us()
         else :
             break 
 
