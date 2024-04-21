@@ -11,47 +11,47 @@ tour_guide = [
 
 itinerary = [
     {
-        "type": "low budget", 
-        "destination": "paris, netherland",
+        "type": "Low Budget", 
+        "destination": "Paris, Netherland",
         "details": 
             [
-                "hari 1 : Departure at Soekarno-Hatta International Airport",
-                "hari 2 : Arrival at Charles de Gaulle Airport and go to Eiffel Tower",
-                "hari 3 ; paris, dijon",
-                "hari 4 ; amsterdam, volendam",
-                "hari 5 ; amsterdam",
-                "hari 6 ; Arrival at Soekarno-Hatta International Airport"
+                "Day 1 : Departure at Soekarno-Hatta Airport",
+                "Day 2 : Arrival at Paris and go to Eiffel Tower",
+                "Day 3 ; Paris, dijon",
+                "Day 4 ; Amsterdam, volendam",
+                "Day 5 ; Amsterdam",
+                "Day 6 ; Arrival at Soekarno-Hatta Airport"
             ],
         "fee": 30000
     },
     {   
-        "type": "premium",
-        "destination": "paris, german, netherland",
+        "type": "Premium",
+        "destination": "Paris, German, Netherland",
         "details": 
         [
-                "hari 1 : departure at Soekarno-Hatta International Airport",
-                "hari 2 : arrival at Charles de Gaulle Airport and go to Eiffel Tower",
-                "hari 3 ; paris, dijon",
-                "hari 4 ; koln, amsterdam",
-                "hari 5 : amsterdam, volendam",
-                "hari 6 ; amsterdam",
-                "hari 7 ; arrival at Soekarno-Hatta International Airport",
+                "Day 1 : departure at Soekarno-Hatta Airport",
+                "Day 2 : arrival at Paris and go to Eiffel Tower",
+                "Day 3 ; Paris, dijon",
+                "Day 4 ; koln, amsterdam",
+                "Day 5 : amsterdam, volendam",
+                "Day 6 ; amsterdam",
+                "Day 7 ; arrival at Soekarno-Hatta Airport",
         ],
         "fee": 40000
     }, 
     {   
-        "type": "luxury_trip",
-        "destination": "paris, german, swiss, netherland",
+        "type": "Luxury Trip",
+        "destination": "Paris, German, Swiss, Netherland",
         "details":
         [
-                "hari 1 : Departure at Soekarno-Hatta International Airport",
-                "hari 2 : Arrival at Charles de Gaulle Airport and go to Eiffel Tower",
-                "hari 3 ; paris, dijon",
-                "hari 4 ; zurich, frankfrurt",
-                "hari 5 ; koln, amsterdam",
-                "hari 6 ; amsterdam, volendam",
-                "hari 7 ; amsterdam",
-                "hari 8 ; Arrival at Soekarno-Hatta International Airport",
+                "Day 1 : Departure at Soekarno-Hatta Airport",
+                "Day 2 : Arrival at Paris and go to Eiffel Tower",
+                "Day 3 ; Paris, dijon",
+                "Day 4 ; zurich, frankfrurt",
+                "Day 5 ; koln, amsterdam",
+                "Day 6 ; amsterdam, volendam",
+                "Day 7 ; amsterdam",
+                "Day 8 ; Arrival at Soekarno-Hatta Airport",
             
         ],
         "fee": 50000
