@@ -62,4 +62,3 @@ visa_handler = [
         {"type": "visa handler only", "price_per_person": 600000},
         {"type": "visa handler include embassy visa fee", "price_per_person": 2300000},
 ]
-

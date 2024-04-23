@@ -3,19 +3,25 @@ import features
 
 
 def main_program() :
+    name = input("\n What your name : ")
+    phone = input("What your number : ")
+
     while True:
-        print("""
+
+        print(f"""
+        Hello, {name}
         Welcome to European travalone
             
         What service do you need ?  
         1. Itinerary
-        2. Travel Guide      
+        2. Tour Guide      
         3. Visa Handler
         4. Edit item from cart
         5. Delete item from cart
-        6. Contact Us for private holliday
+        6. Contact Us for private holliday/ support
         7. Show your cart 
         8. Payment
+        9. exit
             """)
 
         menu = features.input_number("Enter the corresponding number : ")
@@ -37,7 +43,8 @@ def main_program() :
             features.display_cart()
         elif menu == 8 : 
             features.display_cart()
-            features.payment()
+            features.payment(name, phone)
+        elif menu == 9 :
             break
         else :
             print("Input the correct number ! ") 
