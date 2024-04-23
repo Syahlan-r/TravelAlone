@@ -72,7 +72,7 @@ def module_tour_guide():
 
         show_tour_guide()
         num_people = input_max_number(30, "How many people are you (max: 30) : ",
-                                      "The tour guide can not more than 30 person, Please make more group member!!! ") + 1
+                                      "The tour guide can not more than 30 person !!! ") + 1
         
         offer = cat_num_people(num_people)
         hours = input_max_number(12, "How many hours you want (max: 12) : ") + 1

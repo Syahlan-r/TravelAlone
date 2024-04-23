@@ -3,14 +3,16 @@ import features
 
 
 def main_program() :
-    name = input("\n What your name : ")
+    payment = True
     while True:
-        phone = features.input_number(" What your number : ")
-        if len(str(phone)) in [10, 11, 12]:
-            break
-        print("Invalid phone number, please insert min.10 max.12 digit!")
-
-    while True:
+        if payment == True:
+            name = input("\n What your name : ")
+            while True:
+                phone = features.input_number(" What your number : ")
+                if len(str(phone)) in [10, 11, 12]:
+                    break
+                print("Invalid phone number, please insert min.10 max.12 digit!")
+        payment = False
 
         print(f"""
         Hello, {name}
@@ -48,6 +50,7 @@ def main_program() :
         elif menu == 8 : 
             features.display_cart()
             features.payment(name, phone)
+            payment = True
         elif menu == 9 :
             break
         else :
