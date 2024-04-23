@@ -25,7 +25,8 @@ Users can also edit the service they have chosen, whether they want to increase 
 ### Delete function:
 Users can also delete services they have selected, making it easier for users to remove services they don't want. Services that have been deleted by the user will also be deleted by the system and can be seen in the show the cart menu
 
-Dependencies
+## Dependencies
 
-tabulate : For formating table
+tabulate : For formating table,
+
 phyton : for program language
