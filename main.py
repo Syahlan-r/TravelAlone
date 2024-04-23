@@ -4,13 +4,17 @@ import features
 
 def main_program() :
     name = input("\n What your name : ")
-    phone = input("What your number : ")
+    while True:
+        phone = features.input_number(" What your number : ")
+        if len(str(phone)) in [10, 11, 12]:
+            break
+        print("Invalid phone number, please insert min.10 max.12 digit!")
 
     while True:
 
         print(f"""
         Hello, {name}
-        Welcome to European travalone
+        Welcome to Travel Alone
             
         What service do you need ?  
         1. Itinerary

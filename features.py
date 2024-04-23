@@ -71,21 +71,10 @@ def module_tour_guide():
         offer = {}
 
         show_tour_guide()
-
-        while True:
-            num_people = input_number("How many people are you (max: 30) : ")
-            if num_people <= 30 :
-                break    
-            print("The tour guide can not more than 30 person, Please make more group member!!! ")        
-        if num_people > 0  and num_people <= 5:
-            offer = tour_guide[0]                
-        elif num_people > 5  and num_people <= 10:
-            offer = tour_guide[1]
-        elif num_people > 10  and num_people <= 20:
-            offer = tour_guide[2]
-        elif num_people > 20  and num_people <= 30:
-            offer = tour_guide[3]
+        num_people = input_max_number(30, "How many people are you (max: 30) : ",
+                                      "The tour guide can not more than 30 person, Please make more group member!!! ") + 1
         
+        offer = cat_num_people(num_people)
         hours = input_max_number(12, "How many hours you want (max: 12) : ") + 1
         add_to_cart(offer, "tour_guide", num_people, hours)
         print("Your cart: ", end="")
@@ -234,8 +223,6 @@ def delete_from_cart():
     else :
         print ("Can not delete, The Cart are empty!! ")
 
-
-
 def get_yes_no_input(prompt):
     while True:
         user_input = input(prompt).upper()
@@ -267,14 +254,9 @@ def edit_from_cart():
                 qty = input_number("Change the quantity : ")
                 cart[index]["desc"] = f"Number of people: {num_people}"
                 cart[index]["qty"] = qty
-                if num_people > 0  and num_people <= 5:
-                    price = tour_guide[0]["price_per_hour"]           
-                elif num_people > 5  and num_people <= 10:
-                    price = tour_guide[1]["price_per_hour"]
-                elif num_people > 10  and num_people <= 20:
-                    price = tour_guide[2]["price_per_hour"]
-                elif num_people > 20  and num_people <= 30:
-                    price = tour_guide[3]["price_per_hour"]
+                
+                offer = cat_num_people(num_people)
+                price = offer["price_per_hour"]
                 cart[index]["unit_price"] = price
                 cart[index]["subtotal"] = qty * price
             else:
@@ -290,14 +272,24 @@ def edit_from_cart():
         if edit_more.upper() == "N":
             break   
 
-def input_max_number(max_number, text) :
+def input_max_number(max_number, text, error_msg="Number exceed the existing value!") :
     while True:
-        # edit_idx = input_number("Which service you want to edit ? ")
         edit_idx = input_number(text)
         if edit_idx == 0:
             print("Index can't be 0!")
         elif edit_idx > max_number:
-            print("Number exceed the existing value!")
+            print(error_msg)
         else:
             break  
     return edit_idx - 1
+
+def cat_num_people(num_people):
+    if num_people > 0  and num_people <= 5:
+        offer = tour_guide[0]                
+    elif num_people > 5  and num_people <= 10:
+        offer = tour_guide[1]
+    elif num_people > 10  and num_people <= 20:
+        offer = tour_guide[2]
+    elif num_people > 20  and num_people <= 30:
+        offer = tour_guide[3]    
+    return offer
