@@ -19,7 +19,7 @@ def main_program() :
         4. Edit item from cart
         5. Delete item from cart
         6. Contact Us for private holliday/ support
-        7. Show your cart 
+        7. Show the cart 
         8. Payment
         9. exit
             """)
